@@ -1,31 +1,34 @@
 ﻿using UnityEngine;
-using UnityEngine.Audio;     // Use audio API.
-using UnityEngine.UI;       // Use UI API.
+using UnityEngine.Audio;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-public class GameManager : MonoBehaviour
-{
+public class GameManager : MonoBehaviour {
+    [Header("Mixer")]
     public AudioMixer mixer;
+    public Slider bgmBar, sfxBar;
+    [Header("Load")]
     public Text loadingText;
     public Slider loadingBar;
-
+    public string sceneName;
+    void Start() {
+        float bgmValue;
+        mixer.GetFloat("vBGM", out bgmValue);
+        bgmBar.value = bgmValue;
+        float sfxValue;
+        mixer.GetFloat("vBGM", out sfxValue);
+        bgmBar.value = sfxValue;
+    }
     public void BGM_vol (float value)  {mixer.SetFloat("vBGM", value);}
     public void SFX_vol (float value)  {mixer.SetFloat("vSFX", value);}
-    public void Play()
-    {
-        SceneManager.LoadScene("NewScene01");
+    public void Play() {
         StartCoroutine(Loading());
     }
-    private IEnumerator Loading()
-    {
-        //  print("Test 1");
-        //  yield return new WaitForSeconds(1);
-        //  print("Test 2");
-        AsyncOperation ao = SceneManager.LoadSceneAsync("NewScene01");
+    private IEnumerator Loading() {
+        AsyncOperation ao = SceneManager.LoadSceneAsync(sceneName);
         ao.allowSceneActivation = false;
-        while (ao.isDone == false)
-        {
+        while (ao.isDone == false) {
             loadingText.text ="LOADING " + ((ao.progress / 0.9f) * 100).ToString() + " %";
             loadingBar.value = ao.progress / 0.9f;
             yield return new WaitForSeconds(0.025f);
