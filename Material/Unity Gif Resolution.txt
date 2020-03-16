@@ -1,0 +1,7 @@
+1）複製”"System.Drawing.dll" file in the "C:\Program Files (x86)\Unity\Editor\Data\Mono\lib\mono\2.0"檔案到"Assets" 資料夾下面。
+
+2）建立一個新的指令碼命名為“animatedgifdrawer”，與下面的內容。
+
+3）將這個指令碼場景中的任何物件。
+
+4）更改指令碼”loadinggifpath”欄位，你的GIF檔案的路徑。（這可以從根專案資料夾是相對的也可以是絕對的。

@@ -27,8 +27,15 @@ public class PlayerParameter : MonoBehaviour {
 	}
 
     // 角色碰撞傷害處理
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-
+        if (collision.tag == "Trap")
+        {
+            hp -= 3;
+            hpBar.value = hp;
+            print("Touch Trap");
+            Debug.Log(hp);
+        }
     }
+
 }
