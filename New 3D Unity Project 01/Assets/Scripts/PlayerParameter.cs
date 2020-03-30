@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerParameter : MonoBehaviour {
 
@@ -24,6 +25,7 @@ public class PlayerParameter : MonoBehaviour {
             hpBar.value = hp;
             Debug.Log(hp);
         }
+        if (hp <= 0) Restart();
 	}
 
     // 角色碰撞傷害處理
@@ -36,6 +38,9 @@ public class PlayerParameter : MonoBehaviour {
             print("Touch Trap");
             Debug.Log(hp);
         }
+    }
+    private void Restart() {
+        SceneManager.LoadScene(SceneManager.GetSceneAt(0).name);
     }
 
 }

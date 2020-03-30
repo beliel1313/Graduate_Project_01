@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour {
     public Text loadingText;
     public Slider loadingBar;
     public string sceneName;
+
     void Start() {
         float bgmValue;
         mixer.GetFloat("vBGM", out bgmValue);
