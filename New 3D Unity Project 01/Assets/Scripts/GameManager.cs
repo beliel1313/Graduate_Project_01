@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour {
     public Slider loadingBar;
     public string sceneName;
 
+    private bool isPaused = false;
+
     void Start() {
         float bgmValue;
         mixer.GetFloat("vBGM", out bgmValue);
@@ -35,5 +37,16 @@ public class GameManager : MonoBehaviour {
             yield return new WaitForSeconds(0.025f);
             if (ao.progress == 0.9f && Input.anyKey)  ao.allowSceneActivation = true;
         }
+    }
+
+    public void GamePause() {
+        isPaused = !isPaused;
+        if (isPaused == true) { Time.timeScale = 0; }
+        else  { Time.timeScale = 1; }
+    }
+
+    public void GameQuit() {
+        Debug.Log("Quit");
+        Application.Quit();
     }
 }
