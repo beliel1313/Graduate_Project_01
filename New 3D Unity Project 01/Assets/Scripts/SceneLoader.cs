@@ -12,9 +12,11 @@ public class SceneLoader : MonoBehaviour {
     public string sceneName;
 
     public void Play() {
+        Debug.Log("Play()");
         StartCoroutine(Loading());
     }
     private IEnumerator Loading() {
+        Debug.Log("Loading()");
         AsyncOperation ao = SceneManager.LoadSceneAsync(sceneName);
         ao.allowSceneActivation = false;
         while (ao.isDone == false) {
