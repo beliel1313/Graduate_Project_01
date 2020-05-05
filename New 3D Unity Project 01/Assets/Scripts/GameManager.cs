@@ -11,10 +11,6 @@ public class GameManager : MonoBehaviour {
     public AudioMixer mixer;
     public Slider bgmBar, sfxBar;
 
-    [Header("Click")]
-    public GameObject[] ctActive = new GameObject[1];
-    public GameObject[] ctInactive = new GameObject[1];
-
     void Start()
     {
         float bgmValue;
@@ -44,15 +40,6 @@ public class GameManager : MonoBehaviour {
     {
         Debug.Log("GameQuit()");
         Application.Quit();
-
-    }
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(0) == true)
-        {
-            ctActive[0].SetActive(true);
-            ctInactive[0].SetActive(false);
-        }
 
     }
 }
