@@ -24,8 +24,8 @@ public class GameManager : MonoBehaviour {
 
     }
 
-    public void BGM_vol (float value)  {mixer.SetFloat("vBGM", value);}
-    public void SFX_vol (float value)  {mixer.SetFloat("vSFX", value);}
+    public void BGM_vol (float value) {mixer.SetFloat("vBGM", value);}
+    public void SFX_vol (float value) {mixer.SetFloat("vSFX", value);}
 
     public void GamePause()
     {
