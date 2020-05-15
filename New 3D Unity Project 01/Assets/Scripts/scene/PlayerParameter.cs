@@ -36,7 +36,7 @@ public class PlayerParameter : MonoBehaviour {
         // 將生命值更新給血條
         hpBar.value = hp;
         // 將物件計數更新給文字
-        coinText.text = " X " + coinCount;
+        coinText.text = " X " + GameManager.moneyCount;
         cloverText.text = " X " + cloverCount;
         // 應急: 幸運草全收集通關
         if (cloverCount == 3) {
@@ -58,7 +58,7 @@ public class PlayerParameter : MonoBehaviour {
         // 錢幣碰撞取得
         if (collision.tag == "Coin") {
             collision.gameObject.SetActive(false);
-            coinCount += 1;
+            GameManager.moneyCount += 1;
             coinSfx.Play();
         }
         // 幸運草碰撞取得

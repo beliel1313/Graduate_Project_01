@@ -7,9 +7,16 @@ using System.Collections;
 public class GameManager : MonoBehaviour {
     private bool isPaused = false;
 
+    [Header("Static Value")]
+    static public int moneyCount = 0;
+    static private int moneyLimit = 99999;
+
     [Header("Mixer")]
     public AudioMixer mixer;
     public Slider bgmBar, sfxBar;
+
+    [Header("Text")]
+    public Text textMoney;
 
     void Start()
     {
@@ -24,6 +31,16 @@ public class GameManager : MonoBehaviour {
 
     }
 
+    private void Update()
+    {
+        if (moneyCount <= moneyLimit)
+        {
+            textMoney.text = "X " + (moneyLimit - moneyCount).ToString();
+        }
+
+
+    }
+
     public void BGM_vol (float value) {mixer.SetFloat("vBGM", value);}
     public void SFX_vol (float value) {mixer.SetFloat("vSFX", value);}
 
@@ -31,8 +48,8 @@ public class GameManager : MonoBehaviour {
     {
         Debug.Log("GamePause()");
         isPaused = !isPaused;
-        if (isPaused == true) { Time.timeScale = 0; }
-        else  { Time.timeScale = 1; }
+        if (isPaused == true) Time.timeScale = 0; 
+        else Time.timeScale = 1; 
 
     }
 
