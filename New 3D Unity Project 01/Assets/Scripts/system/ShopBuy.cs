@@ -5,16 +5,9 @@ using UnityEngine.UI;
 
 public class ShopBuy : MonoBehaviour {
     [Header("Master")]
-    public RectTransform cartBoard;
-
-    [Header("Shop Food")]
-    public GameObject[] foods;
-
-    [Header("Shop Tool")]
-    public GameObject[] tools;
-
-    [Header("Shop Gear")]
-    public GameObject[] gears;
+    public Transform cartBoard;
+    public GameObject[] cartSlots;
+    private int putted;
 
     [Header("GUI")]
     public Text textBill;
@@ -23,12 +16,12 @@ public class ShopBuy : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         totalBill = 0;
-
+        putted = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        textBill.text = "合計 " + totalBill.ToString();
+        if (textBill != null) textBill.text = "合計 " + totalBill;
 
 	}
 
@@ -48,6 +41,9 @@ public class ShopBuy : MonoBehaviour {
 
     public void PutInCart()
     {
+
+        Instantiate(transform.GetChild(0).gameObject, cartSlots[putted].transform, false);
+        putted += 1;
 
     }
 

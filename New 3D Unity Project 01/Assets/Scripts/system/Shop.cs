@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Shop : MonoBehaviour {
-    public Transform cartBoard;
     public GameObject[] slotFood;
     public GameObject[] slotTool;
     public GameObject[] slotGear;
@@ -12,13 +11,13 @@ public class Shop : MonoBehaviour {
     public GameObject[] tools;
     public GameObject[] gears;
 
-
     // Use this for initialization
     void Start () {
+
         for (int i = 0; i < foods.Length; i++)
         {
             Instantiate(foods[i].gameObject, slotFood[i].transform, false);
-            Debug.Log(foods[i].name + " " + foods[i].transform.position);
+            Debug.Log(foods[i].name + " " + foods[i].transform.position + " ");
 
         }
 
@@ -43,8 +42,4 @@ public class Shop : MonoBehaviour {
 
 	}
 
-    public void PutInCart() 
-    {
-
-    }
 }
