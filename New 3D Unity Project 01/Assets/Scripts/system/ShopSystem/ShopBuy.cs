@@ -6,8 +6,6 @@ using UnityEngine.UI;
 public class ShopBuy : MonoBehaviour {
     [Header("Master")]
     public Transform cartBoard;
-    public GameObject[] cartSlots;
-    private int putted;
 
     [Header("GUI")]
     public Text textBill;
@@ -16,7 +14,6 @@ public class ShopBuy : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         totalBill = 0;
-        putted = 0;
 	}
 	
 	// Update is called once per frame
@@ -27,30 +24,26 @@ public class ShopBuy : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        totalBill += collision.GetComponent<ItemFood>().price;
+        totalBill += collision.GetComponent<ItemMaster>().price;
         collision.tag = "InCart";
 
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        totalBill -= collision.GetComponent<ItemFood>().price;
+        totalBill -= collision.GetComponent<ItemMaster>().price;
         collision.tag = "Untagged";
-
-    }
-
-    public void PutInCart()
-    {
-
-        Instantiate(transform.GetChild(0).gameObject, cartSlots[putted].transform, false);
-        putted += 1;
 
     }
 
     public void Buying()
     {
-        Debug.Log("Buy " + GameObject.FindGameObjectWithTag("InCart").name);
-        Destroy(GameObject.FindGameObjectWithTag("InCart"));
-        
+        while (cartBoard.childCount > 0) 
+        {
+            Debug.Log("Buy " + GameObject.FindGameObjectWithTag("InCart").name);
+            Destroy(GameObject.FindGameObjectWithTag("InCart"));
+
+        }
+
     }
 }

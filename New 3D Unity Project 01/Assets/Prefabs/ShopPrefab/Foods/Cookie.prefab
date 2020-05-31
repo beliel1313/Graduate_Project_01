@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 224147958068066448}
   - component: {fileID: 222853483853208998}
   - component: {fileID: 114801484571024960}
-  - component: {fileID: 114198990423973430}
+  - component: {fileID: 114793875590140742}
   - component: {fileID: 50554234516030094}
   - component: {fileID: 61546906820114736}
   m_Layer: 5
@@ -74,9 +74,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 50, y: 50}
   m_EdgeRadius: 0
---- !u!114 &114198990423973430
+--- !u!114 &114793875590140742
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -84,10 +84,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1339060534818704}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 185ed4591c31dda48929e92af0d30980, type: 3}
+  m_Script: {fileID: 11500000, guid: d9fb5f2cca69e6c4eb784a00d43e6c8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodName: "\u9905\u4E7E"
+  itemName: "\u9905\u4E7E"
   price: 20
 --- !u!114 &114801484571024960
 MonoBehaviour:

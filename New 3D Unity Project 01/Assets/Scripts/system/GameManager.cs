@@ -18,8 +18,7 @@ public class GameManager : MonoBehaviour {
     [Header("Text")]
     public Text textMoney;
 
-    void Start()
-    {
+    void Start() {
         float bgmValue;
         float sfxValue;
 
@@ -31,13 +30,11 @@ public class GameManager : MonoBehaviour {
 
     }
 
-    private void Update()
-    {
+    private void Update() {
         if (moneyCount <= moneyLimit)
         {
             textMoney.text = "X " + (moneyLimit - moneyCount).ToString();
         }
-
 
     }
 

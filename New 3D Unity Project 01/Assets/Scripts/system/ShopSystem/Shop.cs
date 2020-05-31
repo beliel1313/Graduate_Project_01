@@ -11,13 +11,15 @@ public class Shop : MonoBehaviour {
     public GameObject[] tools;
     public GameObject[] gears;
 
+    public GameObject noStockMsg;
+
     // Use this for initialization
     void Start () {
 
         for (int i = 0; i < foods.Length; i++)
         {
             Instantiate(foods[i].gameObject, slotFood[i].transform, false);
-            Debug.Log(foods[i].name + " " + foods[i].transform.position + " ");
+            Debug.Log(foods[i].name + " " + foods[i].transform.position);
 
         }
 
@@ -42,4 +44,25 @@ public class Shop : MonoBehaviour {
 
 	}
 
+    public void StockCheck(string stockCheck)
+    {
+        switch (stockCheck) 
+        {
+            case "Food":
+                if (foods.Length < 1 || slotFood[0].transform.childCount == 0) 
+                    noStockMsg.SetActive(true);
+                break;
+
+            case "Tool":
+                if (tools.Length < 1 || slotTool[0].transform.childCount == 0) 
+                    noStockMsg.SetActive(true);
+                break;
+
+            case "Gear":
+                if (gears.Length < 1 || slotGear[0].transform.childCount == 0) 
+                    noStockMsg.SetActive(true);
+                break;
+
+        }
+    }
 }
