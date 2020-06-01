@@ -9,11 +9,14 @@ public class ItemMaster : MonoBehaviour, IPointerClickHandler,IPointerEnterHandl
 	public int price = 0;
 
 	private GameObject cartBoard;
-	private GameObject itemIntro;
+    private GameObject shopBoard;
+    static public Vector2 itemPos;
+    public GameObject msgPanel;
 
 	// Use this for initialization
 	void Start() {
 		cartBoard = GameObject.Find("CartArea");
+        shopBoard = GameObject.Find("ShopBoard");
 	}
 
 	// Update is called once per frame
@@ -42,8 +45,11 @@ public class ItemMaster : MonoBehaviour, IPointerClickHandler,IPointerEnterHandl
 	{
 		if (transform.tag != "InCart") 
 		{
-			//transform.GetChild(0).gameObject.SetActive(true);
+            itemPos = transform.position;
+            Debug.Log("itemPos " + itemPos.ToString());
+            //Instantiate(msgPanel.gameObject, new Vector2(itemPos.x, itemPos.y), Quaternion.identity);
 
+            //shopBoard.GetComponent<Shop>().ShopMsg();
 		}
 
 	}
@@ -52,7 +58,6 @@ public class ItemMaster : MonoBehaviour, IPointerClickHandler,IPointerEnterHandl
 	{
 		if (transform.tag != "InCart") 
 		{
-			//transform.GetChild(0).gameObject.SetActive(false);
 
 		}
 

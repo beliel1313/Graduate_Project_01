@@ -4,14 +4,17 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Shop : MonoBehaviour {
+    //goods and shop slots
     public GameObject[] slotFood;
     public GameObject[] slotTool;
     public GameObject[] slotGear;
     public GameObject[] foods;
     public GameObject[] tools;
     public GameObject[] gears;
-
+    //shop messages
     public GameObject noStockMsg;
+    //public GameObject msgPanel;
+    //private Text msgText;
 
     // Use this for initialization
     void Start () {
@@ -65,4 +68,11 @@ public class Shop : MonoBehaviour {
 
         }
     }
+    public void ShopMsg()
+    {
+        //GameObject clone;
+        //clone = Instantiate(msgPanel, gameObject.transform, false);
+
+    }
+
 }

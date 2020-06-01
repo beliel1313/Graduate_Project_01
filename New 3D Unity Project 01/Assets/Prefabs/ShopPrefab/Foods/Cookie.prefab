@@ -89,6 +89,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: "\u9905\u4E7E"
   price: 20
+  msgPanel: {fileID: 1003756359110368, guid: a56785ec28939ce4590d7ed70b61b187, type: 2}
 --- !u!114 &114801484571024960
 MonoBehaviour:
   m_ObjectHideFlags: 1
