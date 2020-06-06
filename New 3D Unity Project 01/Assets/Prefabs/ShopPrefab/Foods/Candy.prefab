@@ -87,9 +87,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb5f2cca69e6c4eb784a00d43e6c8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemNumber: 1
   itemName: "\u7CD6\u679C"
   price: 15
-  msgPanel: {fileID: 1003756359110368, guid: a56785ec28939ce4590d7ed70b61b187, type: 2}
 --- !u!114 &114497279905963530
 MonoBehaviour:
   m_ObjectHideFlags: 1

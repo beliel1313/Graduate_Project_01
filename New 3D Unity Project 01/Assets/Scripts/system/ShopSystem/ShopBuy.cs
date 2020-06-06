@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ShopBuy : MonoBehaviour {
     [Header("Master")]
     public Transform cartBoard;
+    public GameObject itemsManager;
 
     [Header("GUI")]
     public Text textBill;
@@ -17,32 +18,32 @@ public class ShopBuy : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         totalBill = 0;
-        moneyText.text = "持有金額: " + moneyCount;
+        moneyText.text = moneyCount.ToString();
         purchaseBtn.interactable = true;
 
     }
 
     // Update is called once per frame
     void Update () {
-        if (textBill != null) textBill.text = "合計 " + totalBill;
+        if (textBill != null) textBill.text = "合計 " + totalBill + " 元";
         if (totalBill > 0 && moneyCount - totalBill > 0)
         {
             moneyText.color = Color.yellow;
-            moneyText.text = "持有金額: " + moneyCount + " ( -" + totalBill + ")";
+            moneyText.text = moneyCount + " ( -" + totalBill + ")";
             purchaseBtn.interactable = true;
 
         }
         else if (totalBill > 0 && moneyCount - totalBill < 0) 
         {
             moneyText.color = Color.red;
-            moneyText.text = "持有金額: " + moneyCount + " ( -" + totalBill + ")";
+            moneyText.text = moneyCount + " ( -" + totalBill + ")";
             //purchaseBtn.enabled = false;
             purchaseBtn.interactable = false;
         }
         else if (totalBill == 0)
         {
             moneyText.color = Color.white;
-            moneyText.text = "持有金額: " + moneyCount;
+            moneyText.text = moneyCount.ToString();
             purchaseBtn.interactable = true;
         }
 
@@ -51,27 +52,35 @@ public class ShopBuy : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         totalBill += collision.GetComponent<ItemMaster>().price;
-        collision.tag = "InCart";
+        //collision.tag = "InCart";
 
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         totalBill -= collision.GetComponent<ItemMaster>().price;
-        collision.tag = "Untagged";
+        //collision.tag = "Untagged";
 
     }
 
     public void Buying()
     {
-        moneyCount -= totalBill;
-
-        while (cartBoard.childCount > 0) 
+        for (int i = 0; i < cartBoard.childCount; i++) 
         {
-            Debug.Log("Buy " + GameObject.FindGameObjectWithTag("InCart").name);
-            Destroy(GameObject.FindGameObjectWithTag("InCart"));
+            itemsManager.GetComponent<ItemManager>()
+                .ownItem[cartBoard.GetChild(i).gameObject.GetComponent<ItemMaster>().itemNumber] += 1;
 
         }
 
+        moneyCount -= totalBill;
+        CartClear();
+
     }
+
+    public void CartClear()
+    {
+        for (int i = 0; i < cartBoard.childCount; i++) Destroy(cartBoard.GetChild(i).gameObject);
+
+    }
+
 }
