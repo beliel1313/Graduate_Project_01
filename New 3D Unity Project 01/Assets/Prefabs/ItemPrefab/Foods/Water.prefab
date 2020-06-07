@@ -9,35 +9,35 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1793657800553700}
+  m_RootGameObject: {fileID: 1649710845776424}
   m_IsPrefabAsset: 1
---- !u!1 &1793657800553700
+--- !u!1 &1649710845776424
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 224657776457490522}
-  - component: {fileID: 222378978483236568}
-  - component: {fileID: 114605823649715278}
-  - component: {fileID: 114965964935729256}
-  - component: {fileID: 50667979507281954}
-  - component: {fileID: 61231644036661742}
+  - component: {fileID: 224342073967753804}
+  - component: {fileID: 222817100694478158}
+  - component: {fileID: 114009285652579180}
+  - component: {fileID: 114422457347696940}
+  - component: {fileID: 50342905777803792}
+  - component: {fileID: 61948852162883044}
   m_Layer: 5
-  m_Name: Spray
+  m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!50 &50667979507281954
+--- !u!50 &50342905777803792
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1793657800553700}
+  m_GameObject: {fileID: 1649710845776424}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -51,12 +51,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61231644036661742
+--- !u!61 &61948852162883044
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1793657800553700}
+  m_GameObject: {fileID: 1649710845776424}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -76,12 +76,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 50, y: 50}
   m_EdgeRadius: 0
---- !u!114 &114605823649715278
+--- !u!114 &114009285652579180
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1793657800553700}
+  m_GameObject: {fileID: 1649710845776424}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -95,7 +95,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 7a374c03ab9e25a439354f8dfb4fa5ed, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b66c03ed19d53ca40894afb6a6bc8d51, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -103,32 +103,34 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114965964935729256
+--- !u!114 &114422457347696940
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1793657800553700}
+  m_GameObject: {fileID: 1649710845776424}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9fb5f2cca69e6c4eb784a00d43e6c8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: "\u9999\u6C23\u6C34"
-  price: 120
---- !u!222 &222378978483236568
+  itemNumber: 3
+  itemName: "\u6C34"
+  price: 10
+  owned: 0
+--- !u!222 &222817100694478158
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1793657800553700}
+  m_GameObject: {fileID: 1649710845776424}
   m_CullTransparentMesh: 0
---- !u!224 &224657776457490522
+--- !u!224 &224342073967753804
 RectTransform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1793657800553700}
+  m_GameObject: {fileID: 1649710845776424}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
