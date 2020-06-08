@@ -26,7 +26,7 @@ public class ShopBuy : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         if (textBill != null) textBill.text = "合計 " + totalBill + " 元";
-        if (totalBill > 0 && moneyCount - totalBill > 0)
+        if (totalBill > 0 && moneyCount - totalBill >= 0)
         {
             moneyText.color = Color.yellow;
             moneyText.text = moneyCount + " ( -" + totalBill + ")";

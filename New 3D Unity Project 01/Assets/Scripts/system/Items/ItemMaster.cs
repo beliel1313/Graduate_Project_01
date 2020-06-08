@@ -14,8 +14,6 @@ public class ItemMaster : MonoBehaviour, IPointerClickHandler,IPointerEnterHandl
 	private GameObject cartBoard;
     private GameObject shopBoard;
     static public Vector2 itemPos;
-	private GameObject shopMsg, itemMsg;
-	private Text shopMsgText, itemMsgText;
 
 	private GameObject boxBoard;
 
@@ -26,16 +24,10 @@ public class ItemMaster : MonoBehaviour, IPointerClickHandler,IPointerEnterHandl
         shopBoard = GameObject.Find("ShopBoard");
 		boxBoard = GameObject.Find("ItemBoxGroup");
 
-		shopMsg = GameObject.Find("ShopMsg");
-		//shopMsg.GetComponent<Text>().text = "";
+    }
 
-		itemMsg = GameObject.Find("ItemMsg");
-		//itemMsg.GetComponent<Text>().text = "";
-
-	}
-
-	// Update is called once per frame
-	void Update() {
+    // Update is called once per frame
+    void Update() {
 		owned = itemsManager.GetComponent<ItemManager>().ownItem[itemNumber];
 
 		if (boxBoard != null) 
@@ -43,12 +35,10 @@ public class ItemMaster : MonoBehaviour, IPointerClickHandler,IPointerEnterHandl
 			if (transform.IsChildOf(boxBoard.transform) && owned == 0)
 			{
 				transform.GetComponent<Image>().color = Color.gray;
-
 			}
 			else if (transform.IsChildOf(boxBoard.transform) && owned > 0)
 			{
 				transform.GetComponent<Image>().color = Color.white;
-
 			}
 
 		}
@@ -68,40 +58,36 @@ public class ItemMaster : MonoBehaviour, IPointerClickHandler,IPointerEnterHandl
 			Destroy(transform.gameObject);
 		}
 
-		if (boxBoard != null && transform.IsChildOf(boxBoard.transform) && owned > 0) 
-		{
-			itemsManager.GetComponent<ItemManager>().ownItem[itemNumber] -= 1;
-			itemMsgText.text = "使用了  " + itemName;
-		}
-	}
+        if (transform.IsChildOf(boxBoard.transform) && owned > 0) 
+        {
+            itemsManager.GetComponent<ItemManager>().ownItem[itemNumber] -= 1;
+            itemsManager.GetComponent<ItemManager>().itemMsg.text = "使用了  " + itemName;
+        }
 
-	public void OnPointerEnter(PointerEventData eventData)
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
 	{
-		shopMsgText = shopMsg.GetComponent<Text>();
-		itemMsgText = itemMsg.GetComponent<Text>();
+        if (transform.IsChildOf(cartBoard.transform) || transform.IsChildOf(shopBoard.transform))
+        {
+            itemsManager.GetComponent<ItemManager>().shopMsg.text = itemName + "  " + price.ToString() + " 元";
+        }
+        else transform.IsChildOf(boxBoard.transform);
+        {
+            itemsManager.GetComponent<ItemManager>().itemMsg.text = "" + itemName;
+        }
 
-		if (shopMsg != null) 
-		{
-			if (transform.IsChildOf(shopBoard.transform) || transform.IsChildOf(cartBoard.transform)) 
-			{
-				shopMsgText.text = itemName + "  " + price + " 元";
-			}
+        if (transform.IsChildOf(boxBoard.transform)) 
+        {
+            //itemsManager.GetComponent<ItemManager>().itemMsg.text = "" + itemName;
+        }
 
-		}
 
-		if (itemMsg != null && transform.IsChildOf(boxBoard.transform)) 
-		{
-			itemMsgText.text = itemName;
-		}
+    }
 
-	}
-
-	public void OnPointerExit(PointerEventData eventData)
+    public void OnPointerExit(PointerEventData eventData)
 	{
-		if (shopMsg != null) 
-		{
-			shopMsgText.text = "";
-		}
-
-	}
+        itemsManager.GetComponent<ItemManager>().shopMsg.text = "";
+        itemsManager.GetComponent<ItemManager>().itemMsg.text = "";
+    }
 }

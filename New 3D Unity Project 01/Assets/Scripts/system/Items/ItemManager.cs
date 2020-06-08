@@ -9,6 +9,8 @@ public class ItemManager : MonoBehaviour {
 	public GameObject itemQuantity;
 	public int[] ownItem;
 
+    public Text shopMsg, itemMsg;
+
 	private GameObject[] cloneItems;
 	private GameObject[] cloneText;
 
@@ -26,9 +28,10 @@ public class ItemManager : MonoBehaviour {
 			cloneItems[i] = Instantiate(items[i].gameObject, slots[i].transform, false);
 			cloneText[i] = Instantiate(itemQuantity.gameObject, cloneItems[i].transform, false);
 			cloneText[i].GetComponent<Text>().text = ownItem[i].ToString();
-
 		}
 
+        shopMsg.text = "";
+        itemMsg.text = "";
 	}
 	
 	// Update is called once per frame

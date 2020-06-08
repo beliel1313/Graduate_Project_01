@@ -24448,6 +24448,8 @@ MonoBehaviour:
   itemQuantity: {fileID: 1956827533846034, guid: e919b36c4d40b4b4492ff63853569ea9,
     type: 2}
   ownItem: 
+  shopMsg: {fileID: 793775006}
+  itemMsg: {fileID: 1148570395}
 --- !u!4 &2033694650
 Transform:
   m_ObjectHideFlags: 0
