@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -249,7 +249,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &71700908
 MonoBehaviour:
@@ -265,6 +265,7 @@ MonoBehaviour:
   mixer: {fileID: 24100000, guid: 5a182ecd99bc46f418314ca4b5d63f05, type: 2}
   bgmBar: {fileID: 1024583708}
   sfxBar: {fileID: 518135291}
+  textMoney: {fileID: 0}
 --- !u!1 &158995453
 GameObject:
   m_ObjectHideFlags: 0
@@ -2337,7 +2338,7 @@ RectTransform:
   - {fileID: 851784117}
   - {fileID: 1286711691}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

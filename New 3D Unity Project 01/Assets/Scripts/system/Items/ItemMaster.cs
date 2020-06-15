@@ -13,8 +13,6 @@ public class ItemMaster : MonoBehaviour, IPointerClickHandler,IPointerEnterHandl
 	private GameObject itemsManager;
 	private GameObject cartBoard;
     private GameObject shopBoard;
-    static public Vector2 itemPos;
-
 	private GameObject boxBoard;
 
 	// Use this for initialization

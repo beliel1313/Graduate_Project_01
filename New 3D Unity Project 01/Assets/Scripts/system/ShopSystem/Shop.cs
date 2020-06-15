@@ -12,7 +12,10 @@ public class Shop : MonoBehaviour {
     public GameObject[] tools;
     public GameObject[] gears;
     //shop messages
+    public Text shopMsg;
     public GameObject noStockMsg;
+    public GameObject itemManage;
+    private int itemSum;
     //public GameObject msgPanel;
     //private Text msgText;
 
@@ -39,6 +42,8 @@ public class Shop : MonoBehaviour {
             Debug.Log(gears[i].name + " " + gears[i].transform.position);
 
         }
+
+        itemSum = itemManage.GetComponent<ItemManager>().items.Length;
 
     }
 

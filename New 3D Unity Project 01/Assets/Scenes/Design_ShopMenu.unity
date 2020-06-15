@@ -6905,7 +6905,9 @@ MonoBehaviour:
   - {fileID: 1349002148437540, guid: a08c4c77dbe40224c90ac88f84226d43, type: 2}
   - {fileID: 1793657800553700, guid: d96322b48599d354d9bd8e6186d6ded9, type: 2}
   gears: []
+  shopMsg: {fileID: 793775006}
   noStockMsg: {fileID: 1150001036}
+  itemManage: {fileID: 2033694648}
 --- !u!1 &577875049
 GameObject:
   m_ObjectHideFlags: 0
@@ -13250,6 +13252,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1259431970}
+  - component: {fileID: 1259431971}
   m_Layer: 5
   m_Name: PlayerMenu
   m_TagString: Untagged
@@ -13279,6 +13282,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1259431971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1259431969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 867ed55c0649d2b49a06c8dd57e084cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bagMsg: {fileID: 1148570395}
+  itemManage: {fileID: 2033694648}
 --- !u!1 &1271933064
 GameObject:
   m_ObjectHideFlags: 0
