@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour {
 
     [Header("Static Value")]
     static public int moneyCount = 0;
-    static private int moneyLimit = 99999;
+    static public int moneyLimit = 99999;
 
     [Header("Mixer")]
     public AudioMixer mixer;
@@ -18,19 +18,20 @@ public class GameManager : MonoBehaviour {
     [Header("Text")]
     public Text textMoney;
 
+    // Use this for initialization
     void Start() {
+        //Audio
         float bgmValue;
         float sfxValue;
-
         mixer.GetFloat("vBGM", out bgmValue);
         mixer.GetFloat("vBGM", out sfxValue);
-
         bgmBar.value = bgmValue;
         bgmBar.value = sfxValue;
 
     }
 
-    private void Update() {
+    // Update is called once per frame
+    void Update() {
         if (moneyCount <= moneyLimit)
         {
             textMoney.text = "X " + (moneyLimit - moneyCount).ToString();
@@ -38,8 +39,15 @@ public class GameManager : MonoBehaviour {
 
     }
 
-    public void BGM_vol (float value) {mixer.SetFloat("vBGM", value);}
-    public void SFX_vol (float value) {mixer.SetFloat("vSFX", value);}
+    public void BGM_vol (float value)
+    {
+        mixer.SetFloat("vBGM", value);
+    }
+
+    public void SFX_vol (float value)
+    {
+        mixer.SetFloat("vSFX", value);
+    }
 
     public void GamePause()
     {

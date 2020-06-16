@@ -24452,7 +24452,7 @@ MonoBehaviour:
   ownItem: 
   shopMsg: {fileID: 793775006}
   itemMsg: {fileID: 1148570395}
-  cartBoard: {fileID: 1415399208}
+  cartBoard: {fileID: 339043014}
   shopBoard: {fileID: 238127145}
   boxBoard: {fileID: 425635784}
 --- !u!4 &2033694650
