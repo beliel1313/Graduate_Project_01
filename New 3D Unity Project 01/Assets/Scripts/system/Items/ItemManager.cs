@@ -14,6 +14,8 @@ public class ItemManager : MonoBehaviour {
 	private GameObject[] cloneItems;
 	private GameObject[] cloneText;
 
+    public GameObject cartBoard, shopBoard, boxBoard;
+
 	// Use this for initialization
 	void Start() {
 		ownItem = new int[items.Length];

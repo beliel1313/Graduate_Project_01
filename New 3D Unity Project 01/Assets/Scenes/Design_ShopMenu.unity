@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641252, b: 0.574817, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13252,7 +13252,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1259431970}
-  - component: {fileID: 1259431971}
   m_Layer: 5
   m_Name: PlayerMenu
   m_TagString: Untagged
@@ -13282,19 +13281,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1259431971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1259431969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 867ed55c0649d2b49a06c8dd57e084cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bagMsg: {fileID: 1148570395}
-  itemManage: {fileID: 2033694648}
 --- !u!1 &1271933064
 GameObject:
   m_ObjectHideFlags: 0
@@ -24466,6 +24452,9 @@ MonoBehaviour:
   ownItem: 
   shopMsg: {fileID: 793775006}
   itemMsg: {fileID: 1148570395}
+  cartBoard: {fileID: 1415399208}
+  shopBoard: {fileID: 238127145}
+  boxBoard: {fileID: 425635784}
 --- !u!4 &2033694650
 Transform:
   m_ObjectHideFlags: 0

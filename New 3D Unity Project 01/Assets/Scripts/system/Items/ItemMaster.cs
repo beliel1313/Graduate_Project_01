@@ -13,14 +13,14 @@ public class ItemMaster : MonoBehaviour, IPointerClickHandler,IPointerEnterHandl
 	private GameObject itemsManager;
 	private GameObject cartBoard;
     private GameObject shopBoard;
-	private GameObject boxBoard;
+    private GameObject boxBoard;
 
 	// Use this for initialization
 	void Start() {
 		itemsManager = GameObject.Find("ItemManager");
-		cartBoard = GameObject.Find("CartArea");
-        shopBoard = GameObject.Find("ShopBoard");
-		boxBoard = GameObject.Find("ItemBoxGroup");
+        cartBoard = itemsManager.GetComponent<ItemManager>().cartBoard;
+        shopBoard = itemsManager.GetComponent<ItemManager>().shopBoard;
+        boxBoard = itemsManager.GetComponent<ItemManager>().boxBoard;
 
     }
 
@@ -72,12 +72,12 @@ public class ItemMaster : MonoBehaviour, IPointerClickHandler,IPointerEnterHandl
         }
         else transform.IsChildOf(boxBoard.transform);
         {
-            itemsManager.GetComponent<ItemManager>().itemMsg.text = "" + itemName;
+            //itemsManager.GetComponent<ItemManager>().itemMsg.text = "" + itemName;
         }
 
         if (transform.IsChildOf(boxBoard.transform)) 
         {
-            //itemsManager.GetComponent<ItemManager>().itemMsg.text = "" + itemName;
+            itemsManager.GetComponent<ItemManager>().itemMsg.text = "" + itemName;
         }
 
 
