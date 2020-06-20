@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ItemManager : MonoBehaviour {
-	public GameObject[] slots;
+	public GameObject[] slotsInBox;
 	public GameObject[] items;
 	public GameObject itemQuantity;
 	public int[] ownItem;
@@ -27,7 +27,7 @@ public class ItemManager : MonoBehaviour {
 			items[i].GetComponent<ItemMaster>().itemNumber = i;
 			ownItem[i] = items[i].GetComponent<ItemMaster>().owned;
 
-			cloneItems[i] = Instantiate(items[i].gameObject, slots[i].transform, false);
+			cloneItems[i] = Instantiate(items[i].gameObject, slotsInBox[i].transform, false);
 			cloneText[i] = Instantiate(itemQuantity.gameObject, cloneItems[i].transform, false);
 			cloneText[i].GetComponent<Text>().text = ownItem[i].ToString();
 		}
