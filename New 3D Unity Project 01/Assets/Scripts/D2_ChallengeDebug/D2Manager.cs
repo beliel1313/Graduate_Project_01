@@ -11,7 +11,6 @@ public class D2Manager : MonoBehaviour {
 
 	public GameObject target;
 	private float tgtTension;
-	private bool isCleared;
 
 	public GameObject blockPanel;
 	public GameObject clearPanel, failedPanel;
@@ -30,15 +29,16 @@ public class D2Manager : MonoBehaviour {
 		tgtTension = target.GetComponent<Target>().tgtTension;
 		if (tgtTension <= 0)
 		{
-			StageFinish();
-			isCleared = true;
+			clearPanel.SetActive(true);
+
 		}
 		else if (tgtTension >= 100) 
 		{
-			StageFinish();
+			failedPanel.SetActive(true);
+
 		}
-				
-		
+
+
 	}
 
 	public void Begin() 
@@ -53,19 +53,6 @@ public class D2Manager : MonoBehaviour {
 			Instantiate(throwItem[i], flyingObj.transform, false);
 			ownItem.GetComponent<OwnItem>().ownItem[i + 6] -= 1;
 			flyingObj.SetActive(true);
-
-		}
-	}
-	void StageFinish() 
-	{
-		blockPanel.SetActive(true);
-		if (isCleared == true)
-		{
-			clearPanel.SetActive(true);
-		}
-		else 
-		{
-			failedPanel.SetActive(true);
 
 		}
 	}
