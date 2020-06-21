@@ -25,21 +25,21 @@ public class Shop : MonoBehaviour {
         for (int i = 0; i < foods.Length; i++)
         {
             Instantiate(foods[i].gameObject, slotFood[i].transform, false);
-            Debug.Log(foods[i].name + " " + foods[i].transform.position);
+            //Debug.Log(foods[i].name + " " + foods[i].transform.position);
 
         }
 
         for (int i = 0; i < tools.Length; i++)
         {
             Instantiate(tools[i].gameObject, slotTool[i].transform, false);
-            Debug.Log(tools[i].name + " " + tools[i].transform.position);
+            //Debug.Log(tools[i].name + " " + tools[i].transform.position);
 
         }
 
         for (int i = 0; i < gears.Length; i++)
         {
             Instantiate(gears[i].gameObject, slotGear[i].transform, false);
-            Debug.Log(gears[i].name + " " + gears[i].transform.position);
+            //Debug.Log(gears[i].name + " " + gears[i].transform.position);
 
         }
 

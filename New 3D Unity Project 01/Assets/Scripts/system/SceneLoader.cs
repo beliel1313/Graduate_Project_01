@@ -11,13 +11,14 @@ public class SceneLoader : MonoBehaviour {
     public Text loadingText;
     public Slider loadingBar;
     public GameObject loadPanel;
-    public string sceneName;
+    private string sceneName;
 
-    public void Play()
+    public void Play(string s)
     {
         Debug.Log("Play");
+        loadPanel.SetActive(true);
+        sceneName = s;
         StartCoroutine(Loading());
-        
     }
 
     private IEnumerator Loading()

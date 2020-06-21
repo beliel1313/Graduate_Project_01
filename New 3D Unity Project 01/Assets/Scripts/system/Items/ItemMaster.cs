@@ -8,8 +8,13 @@ public class ItemMaster : MonoBehaviour, IPointerClickHandler,IPointerEnterHandl
 	public int itemNumber;
 	public string itemName;
 	public int price = 0;
+	public float healValue;
+	public bool allowUseInStage;
+	public bool allowUseOutStage;
 	public int owned;
+	public static int staOwn = 0;
 
+	private bool usePermission;
 	private GameObject itemsManager;
 	private GameObject cartBoard;
     private GameObject shopBoard;
@@ -18,6 +23,7 @@ public class ItemMaster : MonoBehaviour, IPointerClickHandler,IPointerEnterHandl
 	// Use this for initialization
 	void Start() {
 		itemsManager = GameObject.Find("ItemManager");
+		usePermission = itemsManager.GetComponent<ItemManager>().allowUseItemHere;
         cartBoard = itemsManager.GetComponent<ItemManager>().cartBoard;
         shopBoard = itemsManager.GetComponent<ItemManager>().shopBoard;
         boxBoard = itemsManager.GetComponent<ItemManager>().boxBoard;
@@ -27,6 +33,7 @@ public class ItemMaster : MonoBehaviour, IPointerClickHandler,IPointerEnterHandl
     // Update is called once per frame
     void Update() {
 		owned = itemsManager.GetComponent<ItemManager>().ownItem[itemNumber];
+		//owned = ItemManager.ownItem[itemNumber];
 
 		if (boxBoard != null) 
 		{
@@ -56,10 +63,12 @@ public class ItemMaster : MonoBehaviour, IPointerClickHandler,IPointerEnterHandl
 			Destroy(transform.gameObject);
 		}
 
-        if (transform.IsChildOf(boxBoard.transform) && owned > 0) 
+		if (usePermission == true && transform.IsChildOf(boxBoard.transform) && owned > 0) 
         {
-            itemsManager.GetComponent<ItemManager>().ownItem[itemNumber] -= 1;
+			itemsManager.GetComponent<ItemManager>().ownItem[itemNumber] -= 1;
+			//ItemManager.ownItem[itemNumber] -= 1;
             itemsManager.GetComponent<ItemManager>().itemMsg.text = "使用了  " + itemName;
+			PlayerParameter.hp += healValue;
         }
 
     }

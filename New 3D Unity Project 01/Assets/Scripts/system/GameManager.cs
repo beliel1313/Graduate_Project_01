@@ -6,9 +6,10 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour {
     private bool isPaused = false;
+    public bool isMute = false;
 
     [Header("Static Value")]
-    static public int moneyCount = 0;
+    static public int moneyCount;
     static public int moneyLimit = 99999;
 
     [Header("Mixer")]
@@ -34,7 +35,7 @@ public class GameManager : MonoBehaviour {
     void Update() {
         if (moneyCount <= moneyLimit)
         {
-            textMoney.text = "X " + (moneyLimit - moneyCount).ToString();
+            textMoney.text = " X " + moneyCount.ToString();
         }
 
     }

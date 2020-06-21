@@ -12,38 +12,40 @@ public class ShopBuy : MonoBehaviour {
     public Text textBill;
     private int totalBill;
     public Text moneyText;
-    public int moneyCount;
+    public int moneyC;
     public Button purchaseBtn;
 
 	// Use this for initialization
 	void Start () {
+        moneyC = GameManager.moneyCount;
         totalBill = 0;
-        moneyText.text = moneyCount.ToString();
+        moneyText.text = moneyC.ToString();
         purchaseBtn.interactable = true;
 
     }
 
     // Update is called once per frame
     void Update () {
+        moneyC = GameManager.moneyCount;
         if (textBill != null) textBill.text = "合計 " + totalBill + " 元";
-        if (totalBill > 0 && moneyCount - totalBill >= 0)
+        if (totalBill > 0 && moneyC - totalBill >= 0)
         {
             moneyText.color = Color.yellow;
-            moneyText.text = moneyCount + " ( -" + totalBill + ")";
+            moneyText.text = moneyC + " ( -" + totalBill + ")";
             purchaseBtn.interactable = true;
 
         }
-        else if (totalBill > 0 && moneyCount - totalBill < 0) 
+        else if (totalBill > 0 && moneyC - totalBill < 0) 
         {
             moneyText.color = Color.red;
-            moneyText.text = moneyCount + " ( -" + totalBill + ")";
+            moneyText.text = moneyC + " ( -" + totalBill + ")";
             //purchaseBtn.enabled = false;
             purchaseBtn.interactable = false;
         }
         else if (totalBill == 0)
         {
             moneyText.color = Color.white;
-            moneyText.text = moneyCount.ToString();
+            moneyText.text = moneyC.ToString();
             purchaseBtn.interactable = true;
         }
 
@@ -69,10 +71,14 @@ public class ShopBuy : MonoBehaviour {
         {
             itemsManager.GetComponent<ItemManager>()
                 .ownItem[cartBoard.GetChild(i).gameObject.GetComponent<ItemMaster>().itemNumber] += 1;
+            //ItemManager.ownItem
+            //    [cartBoard.GetChild(i).gameObject.GetComponent<ItemMaster>().itemNumber] += 1;
+            //ItemMaster.staOwn += cartBoard.GetChild(i).gameObject.GetComponent<ItemMaster>().owned;
 
         }
 
-        moneyCount -= totalBill;
+        moneyC -= totalBill;
+        GameManager.moneyCount = moneyC;
         CartClear();
 
     }

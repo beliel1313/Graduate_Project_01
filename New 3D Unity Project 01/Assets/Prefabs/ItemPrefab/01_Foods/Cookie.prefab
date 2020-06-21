@@ -9,35 +9,35 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1496548720384154}
+  m_RootGameObject: {fileID: 1339060534818704}
   m_IsPrefabAsset: 1
---- !u!1 &1496548720384154
+--- !u!1 &1339060534818704
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 224285025477202854}
-  - component: {fileID: 222981253503636836}
-  - component: {fileID: 114497279905963530}
-  - component: {fileID: 114090962106477388}
-  - component: {fileID: 50052553899169318}
-  - component: {fileID: 61619964661578886}
+  - component: {fileID: 224147958068066448}
+  - component: {fileID: 222853483853208998}
+  - component: {fileID: 114801484571024960}
+  - component: {fileID: 114793875590140742}
+  - component: {fileID: 50554234516030094}
+  - component: {fileID: 61546906820114736}
   m_Layer: 5
-  m_Name: Candy
+  m_Name: Cookie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!50 &50052553899169318
+--- !u!50 &50554234516030094
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1496548720384154}
+  m_GameObject: {fileID: 1339060534818704}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -51,12 +51,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61619964661578886
+--- !u!61 &61546906820114736
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1496548720384154}
+  m_GameObject: {fileID: 1339060534818704}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -76,27 +76,30 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 50, y: 50}
   m_EdgeRadius: 0
---- !u!114 &114090962106477388
+--- !u!114 &114793875590140742
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1496548720384154}
+  m_GameObject: {fileID: 1339060534818704}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9fb5f2cca69e6c4eb784a00d43e6c8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemNumber: 1
-  itemName: "\u7CD6\u679C"
-  price: 15
+  itemNumber: 2
+  itemName: "\u9905\u4E7E"
+  price: 20
+  healValue: 20
+  allowUseInStage: 1
+  allowUseOutStage: 0
   owned: 0
---- !u!114 &114497279905963530
+--- !u!114 &114801484571024960
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1496548720384154}
+  m_GameObject: {fileID: 1339060534818704}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -110,7 +113,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0f0b9b37c23654542835c5401887dd76, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e7a7249bfaffff145bbc111b3399cb3c, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -118,19 +121,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!222 &222981253503636836
+--- !u!222 &222853483853208998
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1496548720384154}
+  m_GameObject: {fileID: 1339060534818704}
   m_CullTransparentMesh: 0
---- !u!224 &224285025477202854
+--- !u!224 &224147958068066448
 RectTransform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1496548720384154}
+  m_GameObject: {fileID: 1339060534818704}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}

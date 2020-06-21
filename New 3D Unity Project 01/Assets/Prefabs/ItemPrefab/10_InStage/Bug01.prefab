@@ -9,35 +9,36 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1649710845776424}
+  m_RootGameObject: {fileID: 1821273689822906}
   m_IsPrefabAsset: 1
---- !u!1 &1649710845776424
+--- !u!1 &1821273689822906
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 224342073967753804}
-  - component: {fileID: 222817100694478158}
-  - component: {fileID: 114009285652579180}
-  - component: {fileID: 114422457347696940}
-  - component: {fileID: 50342905777803792}
-  - component: {fileID: 61948852162883044}
+  - component: {fileID: 224826986712682702}
+  - component: {fileID: 222013870432453004}
+  - component: {fileID: 114005967253983344}
+  - component: {fileID: 114166229889607294}
+  - component: {fileID: 114108974956556844}
+  - component: {fileID: 50493834135116746}
+  - component: {fileID: 61351032453834644}
   m_Layer: 5
-  m_Name: Water
+  m_Name: Bug01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!50 &50342905777803792
+--- !u!50 &50493834135116746
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1649710845776424}
+  m_GameObject: {fileID: 1821273689822906}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -51,12 +52,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61948852162883044
+--- !u!61 &61351032453834644
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1649710845776424}
+  m_GameObject: {fileID: 1821273689822906}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -76,12 +77,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 50, y: 50}
   m_EdgeRadius: 0
---- !u!114 &114009285652579180
+--- !u!114 &114005967253983344
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1649710845776424}
+  m_GameObject: {fileID: 1821273689822906}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -95,7 +96,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b66c03ed19d53ca40894afb6a6bc8d51, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c06857b977672ea44917f230d0053e5f, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -103,34 +104,50 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114422457347696940
+--- !u!114 &114108974956556844
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1649710845776424}
+  m_GameObject: {fileID: 1821273689822906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35495b63e8e68ca4a92f08bcaa46cc2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flyingObj: {fileID: 0}
+  throwThis: {fileID: 0}
+--- !u!114 &114166229889607294
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1821273689822906}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9fb5f2cca69e6c4eb784a00d43e6c8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemNumber: 3
-  itemName: "\u6C34"
-  price: 10
+  itemNumber: 7
+  itemName: "\u6606\u87F2"
+  price: 0
+  healValue: -10
+  allowUseInStage: 1
+  allowUseOutStage: 0
   owned: 0
---- !u!222 &222817100694478158
+--- !u!222 &222013870432453004
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1649710845776424}
+  m_GameObject: {fileID: 1821273689822906}
   m_CullTransparentMesh: 0
---- !u!224 &224342073967753804
+--- !u!224 &224826986712682702
 RectTransform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1649710845776424}
+  m_GameObject: {fileID: 1821273689822906}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
