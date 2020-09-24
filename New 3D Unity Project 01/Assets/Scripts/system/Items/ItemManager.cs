@@ -20,7 +20,7 @@ public class ItemManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start() {
-		ownItem = new int[items.Length];
+        ownItem = new int[items.Length];
 		imo = IM_ownItem.GetComponent<OwnItem>().ownItem;
 
 		cloneItems = new GameObject[items.Length];
