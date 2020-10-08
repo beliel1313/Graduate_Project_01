@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 
 public class For2ndExh : MonoBehaviour {
+    // This script was coded ONLY for 108-2 final test!
 	public Image noticeMark;
 	public GameObject giveMoneyMsg;
 	public GameObject msgPanel;
