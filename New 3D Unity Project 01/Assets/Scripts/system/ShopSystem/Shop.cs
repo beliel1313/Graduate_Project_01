@@ -4,17 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Shop : MonoBehaviour {
-    //goods and shop slots
-    public GameObject[] slotFood;
-    public GameObject[] slotTool;
-    public GameObject[] slotGear;
-    public GameObject[] foods;
-    public GameObject[] tools;
-    public GameObject[] gears;
-    //shop messages
-    public Text shopMsg;
-    public GameObject noStockMsg;
-    public GameObject itemManage;
+    public GameObject[] slotFood;   // 食物類插槽
+    public GameObject[] slotTool;   // 工具類插槽
+    public GameObject[] slotGear;   // 裝備類插槽
+    public GameObject[] foods;   // 食物類
+    public GameObject[] tools;   // 工具類
+    public GameObject[] gears;   // 裝備類
+
+    public Text shopMsg;   // 商店內訊息
+    public GameObject noStockMsg;   // 無存貨訊息
+    public GameObject itemManage;   // 道具管理
     private int itemSum;
     //public GameObject msgPanel;
     //private Text msgText;

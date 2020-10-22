@@ -8,6 +8,7 @@ public class D2Manager : MonoBehaviour {
 	public GameObject ownItem;
 	public GameObject[] throwItem;
 	public Text[] itemQua;
+	ItemMaster ItemMaster;
 
 	public GameObject target;
 	private float tgtTension;
@@ -18,8 +19,22 @@ public class D2Manager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Time.timeScale = 0;
+
+		if (ownItem.GetComponent<OwnItem>().ownItem[6] < 1) 
+		{
+			ownItem.GetComponent<OwnItem>().ownItem[6] = 99;
+		}
+		if (ownItem.GetComponent<OwnItem>().ownItem[7] < 1)
+		{
+			ownItem.GetComponent<OwnItem>().ownItem[7] = 99;
+		}
+		if (ownItem.GetComponent<OwnItem>().ownItem[8] < 1)
+		{
+			ownItem.GetComponent<OwnItem>().ownItem[8] = 99;
+		}
+
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		itemQua[0].text = (ownItem.GetComponent<OwnItem>().ownItem[6]).ToString();

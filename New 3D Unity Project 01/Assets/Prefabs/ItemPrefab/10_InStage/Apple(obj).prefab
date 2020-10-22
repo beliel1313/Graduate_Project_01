@@ -102,9 +102,10 @@ MonoBehaviour:
   itemNumber: 6
   itemName: "\u860B\u679C"
   price: 0
+  healValue: 0
   allowUseInStage: 1
   allowUseOutStage: 0
-  owned: 0
+  owned: 99
 --- !u!212 &212971246190375768
 SpriteRenderer:
   m_ObjectHideFlags: 1

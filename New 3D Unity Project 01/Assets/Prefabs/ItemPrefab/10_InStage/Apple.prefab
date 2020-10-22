@@ -94,7 +94,7 @@ MonoBehaviour:
   healValue: 20
   allowUseInStage: 1
   allowUseOutStage: 0
-  owned: 0
+  owned: 99
 --- !u!114 &114276750709211076
 MonoBehaviour:
   m_ObjectHideFlags: 1

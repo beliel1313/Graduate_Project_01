@@ -134,7 +134,7 @@ MonoBehaviour:
   healValue: 50
   allowUseInStage: 1
   allowUseOutStage: 0
-  owned: 0
+  owned: 99
 --- !u!222 &222070929258690234
 CanvasRenderer:
   m_ObjectHideFlags: 1
