@@ -7670,7 +7670,7 @@ GameObject:
   - component: {fileID: 1540889356}
   - component: {fileID: 1540889355}
   m_Layer: 5
-  m_Name: GrandBack
+  m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
