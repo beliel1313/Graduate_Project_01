@@ -6,7 +6,7 @@ public class For2ndExh : MonoBehaviour {
 	public Image noticeMark;
 	public GameObject giveMoneyMsg;
 	public GameObject msgPanel;
-	private static bool isMoneyGived = false;
+	public static bool isMoneyGived = false;
 
 	void Start() 
 	{

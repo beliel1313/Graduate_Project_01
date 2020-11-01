@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class ItemMasterV2 : MonoBehaviour,IPointerClickHandler,IPointerEnterHandler,IPointerExitHandler {
     // 使道具圖像可被游標點擊; 游標移入時顯示訊息, 並於游標移出時消失
     // 由道具自體管理之參數宣告於下
+    // 由道具自體管理之參數設於此語法
     public int itemNum; // 編號
     public string itemName; // 名稱
     public int itemPrice; // 價格

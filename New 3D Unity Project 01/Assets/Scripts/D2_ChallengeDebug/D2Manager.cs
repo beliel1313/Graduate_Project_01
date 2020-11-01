@@ -37,6 +37,25 @@ public class D2Manager : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+        if (ownItem.GetComponent<OwnItem>().ownItem[6] < 1)
+        {
+            ownItem.GetComponent<OwnItem>().ownItem[6] += 10;
+        }
+        if (ownItem.GetComponent<OwnItem>().ownItem[7] < 1)
+        {
+            ownItem.GetComponent<OwnItem>().ownItem[7] += 10;
+        }
+
+        if (ownItem.GetComponent<OwnItem>().ownItem[8] < 1)
+        {
+            ownItem.GetComponent<OwnItem>().ownItem[8] += 10;
+        }
+
+
+    }
+
+    // Update is called once per frame
+    void Update () {
 		itemQua[0].text = (ownItem.GetComponent<OwnItem>().ownItem[6]).ToString();
 		itemQua[1].text = (ownItem.GetComponent<OwnItem>().ownItem[7]).ToString();
 		itemQua[2].text = (ownItem.GetComponent<OwnItem>().ownItem[8]).ToString();
