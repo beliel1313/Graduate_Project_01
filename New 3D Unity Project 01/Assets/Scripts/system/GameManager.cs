@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour {
     private bool isPaused = false;
     public bool isMute = false;
 
-    [Header("Static Value")]
+    [Header("Public Value")]
     static public int moneyCount;
     static public int moneyLimit = 99999;
 
