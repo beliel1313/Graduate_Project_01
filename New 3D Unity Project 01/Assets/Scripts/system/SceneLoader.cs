@@ -8,8 +8,8 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour {
     
     [Header("Load")]
-    public Text loadingText;
-    public Slider loadingBar;
+    // public Text loadingText;
+    // public Slider loadingBar;
     public GameObject loadPanel;
     private string sceneName;
 

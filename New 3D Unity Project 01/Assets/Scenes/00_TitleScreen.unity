@@ -232,6 +232,7 @@ GameObject:
   - component: {fileID: 71700907}
   - component: {fileID: 71700908}
   - component: {fileID: 71700909}
+  - component: {fileID: 71700910}
   m_Layer: 0
   m_Name: GM
   m_TagString: Untagged
@@ -264,9 +265,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMute: 0
-  mixer: {fileID: 24100000, guid: 5a182ecd99bc46f418314ca4b5d63f05, type: 2}
-  bgmBar: {fileID: 1024583708}
-  sfxBar: {fileID: 518135291}
   textMoney: {fileID: 0}
 --- !u!114 &71700909
 MonoBehaviour:
@@ -279,9 +277,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e516e00ba6c65464a832f718544a6114, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadingText: {fileID: 0}
-  loadingBar: {fileID: 0}
   loadPanel: {fileID: 1286711690}
+--- !u!114 &71700910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 71700906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe182ab8c9512b4c9879fe1b1adf061, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: 5a182ecd99bc46f418314ca4b5d63f05, type: 2}
+  bgmBar: {fileID: 1024583708}
+  sfxBar: {fileID: 518135291}
 --- !u!1 &158995453
 GameObject:
   m_ObjectHideFlags: 0
@@ -1219,7 +1229,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 71700908}
+      - m_Target: {fileID: 71700910}
         m_MethodName: SFX_vol
         m_Mode: 0
         m_Arguments:
@@ -2564,7 +2574,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 71700908}
+      - m_Target: {fileID: 71700910}
         m_MethodName: BGM_vol
         m_Mode: 0
         m_Arguments:
@@ -4217,7 +4227,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 01_HomeMenu
+          m_StringArgument: 01_MainScreen
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 986749290}
@@ -4278,8 +4288,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e516e00ba6c65464a832f718544a6114, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadingText: {fileID: 0}
-  loadingBar: {fileID: 0}
   loadPanel: {fileID: 1286711690}
 --- !u!1 &2131632161
 GameObject:
