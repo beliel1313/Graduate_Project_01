@@ -441,7 +441,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 105, y: -110}
+  m_AnchoredPosition: {x: 825, y: -50}
   m_SizeDelta: {x: 150, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &79376574 stripped
@@ -669,15 +669,15 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 570765913}
-  - {fileID: 552659486}
-  - {fileID: 1145579591}
   - {fileID: 970166141}
+  - {fileID: 1145579591}
+  - {fileID: 552659486}
   - {fileID: 1739369329}
+  - {fileID: 570765913}
   - {fileID: 359540309}
+  - {fileID: 1053400871}
   - {fileID: 1523902039}
   - {fileID: 250218865}
-  - {fileID: 1053400871}
   m_Father: {fileID: 34071461}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1209,7 +1209,7 @@ GameObject:
   - component: {fileID: 242758114}
   - component: {fileID: 242758113}
   m_Layer: 5
-  m_Name: Button2Stg3
+  m_Name: btn2F-3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1226,7 +1226,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2093180789}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1389,7 +1389,7 @@ GameObject:
   - component: {fileID: 250218867}
   - component: {fileID: 250218866}
   m_Layer: 5
-  m_Name: "\u6309\u9215\u9B54\u738B\u7BB1"
+  m_Name: "\u6309\u9215S1_\u9B54\u738B\u7BB1"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1406,7 +1406,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 126415116}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1571,7 +1571,7 @@ GameObject:
   - component: {fileID: 261764165}
   - component: {fileID: 261764164}
   m_Layer: 5
-  m_Name: Button2Stg2
+  m_Name: btn2F-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1588,7 +1588,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2093180789}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1695,6 +1695,7 @@ GameObject:
   - component: {fileID: 304746425}
   - component: {fileID: 304746426}
   - component: {fileID: 304746427}
+  - component: {fileID: 304746428}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1740,6 +1741,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMute: 0
   textMoney: {fileID: 109092359}
+--- !u!114 &304746428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 304746424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22ddea3655d0d5b4e9a5efab59433ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  home: {fileID: 1924658079}
+  map: {fileID: 311363546}
+  btn2map: {fileID: 1541126542}
+  btn2home: {fileID: 522900528}
+  stageProcess: {fileID: 114632123848717528, guid: e3392c7d2a41a7c47989c3510a02ee83,
+    type: 2}
+  btn2Stage:
+  - {fileID: 2117333628}
+  - {fileID: 261764164}
+  - {fileID: 242758113}
+  btn2World:
+  - {fileID: 970166142}
+  - {fileID: 1145579592}
+  - {fileID: 552659487}
+  - {fileID: 1739369330}
+  - {fileID: 570765914}
+  - {fileID: 359540310}
+  - {fileID: 1053400872}
 --- !u!1 &311363546
 GameObject:
   m_ObjectHideFlags: 0
@@ -1993,7 +2023,7 @@ GameObject:
   - component: {fileID: 359540311}
   - component: {fileID: 359540310}
   m_Layer: 5
-  m_Name: "\u6309\u9215\u9AD8\u5C71"
+  m_Name: "\u6309\u921505_\u9AD8\u5C71"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2296,7 +2326,7 @@ RectTransform:
   - {fileID: 1641065154}
   - {fileID: 817827631}
   m_Father: {fileID: 2093180789}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2704,6 +2734,29 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 304746428}
+        m_MethodName: BackToMap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 919933347}
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 1794b37b42a715f449b2afc80946451f,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &522900531
@@ -2830,7 +2883,7 @@ GameObject:
   - component: {fileID: 552659488}
   - component: {fileID: 552659487}
   m_Layer: 5
-  m_Name: "\u6309\u9215\u6E56\u6CCA"
+  m_Name: "\u6309\u921502_\u6E56\u6CCA"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2847,7 +2900,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 126415116}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2974,7 +3027,7 @@ GameObject:
   - component: {fileID: 570765915}
   - component: {fileID: 570765914}
   m_Layer: 5
-  m_Name: "\u6309\u9215\u6FD5\u5730"
+  m_Name: "\u6309\u921504_\u6FD5\u5730"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2991,7 +3044,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 126415116}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3194,7 +3247,7 @@ GameObject:
   - component: {fileID: 654144582}
   - component: {fileID: 654144581}
   m_Layer: 5
-  m_Name: btnYes
+  m_Name: btn2F-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3266,7 +3319,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 03-1_Stage1
+          m_StringArgument: 03-1_ForestStage1
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -3697,7 +3750,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 18624103}
   m_Direction: 3
   m_Value: 0.5658155
-  m_Size: 0.3658294
+  m_Size: 0.36582944
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3980,7 +4033,7 @@ GameObject:
   - component: {fileID: 772650316}
   - component: {fileID: 772650315}
   m_Layer: 5
-  m_Name: btnNo
+  m_Name: btnBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4590,7 +4643,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 890814219}
   m_OnClick:
     m_PersistentCalls:
@@ -4904,7 +4957,7 @@ GameObject:
   - component: {fileID: 970166143}
   - component: {fileID: 970166142}
   m_Layer: 5
-  m_Name: "\u6309\u9215\u68EE\u6797"
+  m_Name: "\u6309\u921500_\u68EE\u6797"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4921,7 +4974,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 126415116}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5275,7 +5328,7 @@ RectTransform:
   - {fileID: 501340628}
   - {fileID: 1490579166}
   m_Father: {fileID: 2093180789}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5453,7 +5506,7 @@ GameObject:
   - component: {fileID: 1053400873}
   - component: {fileID: 1053400872}
   m_Layer: 5
-  m_Name: "\u6309\u9215\u9AB7\u9ACF"
+  m_Name: "\u6309\u921506_\u9AB7\u9ACF"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5470,7 +5523,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 126415116}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5584,7 +5637,7 @@ GameObject:
   - component: {fileID: 1145579593}
   - component: {fileID: 1145579592}
   m_Layer: 5
-  m_Name: "\u6309\u9215\u5C71\u6D1E"
+  m_Name: "\u6309\u921501_\u5C71\u6D1E"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5601,7 +5654,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 126415116}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6317,7 +6370,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1422939468}
   m_OnClick:
     m_PersistentCalls:
@@ -6524,7 +6577,7 @@ GameObject:
   - component: {fileID: 1523902041}
   - component: {fileID: 1523902040}
   m_Layer: 5
-  m_Name: "\u6309\u9215\u5BF6\u7BB1"
+  m_Name: "\u6309\u9215S0_\u5BF6\u7BB1"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6541,7 +6594,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 126415116}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6819,6 +6872,29 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 304746428}
+        m_MethodName: BackToMap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 919933347}
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 1794b37b42a715f449b2afc80946451f,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -7178,7 +7254,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 285, y: -110}
+  m_AnchoredPosition: {x: 825, y: -50}
   m_SizeDelta: {x: 150, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1617635060
@@ -7920,7 +7996,7 @@ GameObject:
   - component: {fileID: 1739369331}
   - component: {fileID: 1739369330}
   m_Layer: 5
-  m_Name: "\u6309\u9215\u6C99\u7058"
+  m_Name: "\u6309\u921503_\u6C99\u7058"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7937,7 +8013,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 126415116}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8203,7 +8279,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1830575588
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8871,11 +8947,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1027078321}
+  - {fileID: 450030695}
   - {fileID: 2117333627}
   - {fileID: 261764163}
   - {fileID: 242758112}
-  - {fileID: 1027078321}
-  - {fileID: 450030695}
   m_Father: {fileID: 872040443}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8952,7 +9028,7 @@ GameObject:
   - component: {fileID: 2117333629}
   - component: {fileID: 2117333628}
   m_Layer: 5
-  m_Name: Button2Stg1
+  m_Name: btn2F-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8969,7 +9045,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2093180789}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
