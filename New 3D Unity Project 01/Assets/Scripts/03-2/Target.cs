@@ -13,7 +13,7 @@ public class Target : MonoBehaviour {
 		tensionBar.minValue = 0;
 		tensionBar.maxValue = 100;
 		isStart = true;
-		InvokeRepeating("TensionUp", 1, 1);
+		// InvokeRepeating("TensionChange", 1f, 1f);
 	}
 	
 	// Update is called once per frame
@@ -22,18 +22,19 @@ public class Target : MonoBehaviour {
 
 	}
 
-	void TensionUp()
+	public void TensionChange()
 	{
-		if (isStart == true && 0 < tensionBar.value && tensionBar.value < 100) tgtTension += 5;
-
+		if (isStart == true && 0 < tensionBar.value && tensionBar.value < 100) 
+		{
+		tgtTension -= 5;
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D other) 
 	{
 		if (other.gameObject.GetComponent<ItemParameter>() != null) 
 		{
-			tgtTension += other.gameObject.GetComponent<ItemParameter>().ATK;
-			//if (tgtTension < 0) print("CLEAR!!");
+			tgtTension -= other.gameObject.GetComponent<ItemParameter>().ATK;
 		}
 
 		other.gameObject.SetActive(false);

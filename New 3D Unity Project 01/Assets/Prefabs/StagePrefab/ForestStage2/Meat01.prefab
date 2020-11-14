@@ -87,7 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9afd221b03d02f844a659dbdd09ee2f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ATK: 50
+  ATK: 40
 --- !u!114 &114746939867872616
 MonoBehaviour:
   m_ObjectHideFlags: 1
