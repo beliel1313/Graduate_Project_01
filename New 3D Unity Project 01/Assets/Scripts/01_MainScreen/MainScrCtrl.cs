@@ -32,6 +32,8 @@ public class MainScrCtrl : MonoBehaviour {
 
 		}
 
+		stageProcess.stageIsOpen[0] = true;
+		stageProcess.worldIsOpen[0] = true;
 		for (int i = 0; i < btn2Stage.Length; i++) 
 		{
 			if (stageProcess.stageIsOpen[i] == true) 
@@ -39,6 +41,14 @@ public class MainScrCtrl : MonoBehaviour {
 				btn2Stage[i].interactable = true;
 			}
 		}
+		for (int i = 0; i < btn2World.Length; i++)
+		{
+			if (stageProcess.worldIsOpen[i] == true)
+			{
+				btn2World[i].interactable = true;
+			}
+		}
+
 	}
 
 

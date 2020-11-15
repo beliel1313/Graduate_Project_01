@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StageProcess : MonoBehaviour {
-	public bool[] stageIsOpen;
-	public bool[] worldIsOpen;
+public class Waste : MonoBehaviour {
+	public int price;
 
 	// Use this for initialization
 	void Start () {
