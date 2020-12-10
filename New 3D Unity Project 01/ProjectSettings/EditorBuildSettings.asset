@@ -12,12 +12,15 @@ EditorBuildSettings:
     path: Assets/Scenes/01_MainScreen.unity
     guid: 314a2b7a509fe4a48856afee36989190
   - enabled: 1
-    path: Assets/Scenes/03-1_ForestStage1.unity
+    path: Assets/Scenes/03-1A_ForestIntro1.unity
+    guid: 233c7f136ee4356419f2aebc4331d7be
+  - enabled: 1
+    path: Assets/Scenes/03-1B_ForestStage1.unity
     guid: f2eecddedcd6b6d44913490e3a0df471
   - enabled: 1
-    path: Assets/Scenes/03-2_ForestStage2.unity
+    path: Assets/Scenes/03-2B_ForestStage2.unity
     guid: dab0fe888d6a05d4ebdb82c4b5a0a99a
   - enabled: 1
-    path: Assets/Scenes/03-3_ForestStage3.unity
+    path: Assets/Scenes/03-3B_ForestStage3.unity
     guid: 9e68e02956f053743b9eaebd8a5f9ebf
   m_configObjects: {}
