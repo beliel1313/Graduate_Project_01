@@ -9,7 +9,7 @@ public class SceneLoader : MonoBehaviour {
     // public Text loadingText;
     // public Slider loadingBar;
     public GameObject loadPanel;
-    private string sceneName;
+    public string sceneName;
 
     public void Play(string s)
     {

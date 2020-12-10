@@ -6,16 +6,6 @@ using UnityEngine.UI;
 public class _03_1_INTRO : MonoBehaviour {
     public GameObject introMsg, introTxt;
 
-	// Use this for initialization
-	void Start () {
-
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
@@ -40,7 +30,7 @@ public class _03_1_INTRO : MonoBehaviour {
         if (introMsg.GetComponent<Image>().color.a >= 0.5f && introTxt.GetComponent<Text>().color.a >= 1f) 
         {
             CancelInvoke("FadeIn");
-            InvokeRepeating("FadeOut", 1f, 0.025f);
+            InvokeRepeating("FadeOut", 1.5f, 0.025f);
         }
     }
 
