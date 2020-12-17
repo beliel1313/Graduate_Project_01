@@ -12,12 +12,14 @@ public class _03_1_PLAY : MonoBehaviour {
 	private int count2 = 0;  // StageStart() 執行次數
 	public int answer = 0; // 正解編號
 	public int clickTime = 0;   //點擊草叢次數
+    public GameObject[] lifePoint; // 可失敗次數
 	public bool isFind;	// 是否找到
 	[Header("UI")]
 	public GameObject blockPanel;   // 阻擋操作的 UI.Panel
 	public GameObject msgPanel; // 顯示訊息的 UI.Panel
 	public Text countText;  //開始前倒數 UI.Text
 	public GameObject failPanel, successPanel;  // 失敗與通關的 UI.Panel
+    public GameObject[] msg1st, msg2nd;
 
 	// Use this for initialization
 	void Start () {
@@ -26,6 +28,10 @@ public class _03_1_PLAY : MonoBehaviour {
 			// 給草叢依序加上編號
 			growth[i].gameObject.GetComponent<_03_1_GROWTH>().num = i;
 		}
+        if (stageProcess.stageClearTime[0] >= 1)
+        {
+
+        }
 	}
 
 	// Update is called once per frame
@@ -68,15 +74,27 @@ public class _03_1_PLAY : MonoBehaviour {
 	// 正解 FindAnimal() -> Success()
 	public void FindAnimal() 
 	{
-		Instantiate(animal, growth[answer], false);
-		blockPanel.SetActive(true); // 啟動 blockPanel
+		Instantiate(animal, growth[answer], false); // 讓動物現身正解草叢
+        blockPanel.SetActive(true); // 啟動 blockPanel
 		Invoke("Success", 2f);
 	}
-	private void Success() 
+    public void FindOops()
+    {
+        GameObject cloneA;
+        cloneA = Instantiate(animal, growth[answer], false); // 讓動物現身正解草叢
+        blockPanel.SetActive(true); // 啟動 blockPanel
+        count2 = 0;
+        Destroy(cloneA.gameObject, 2f);
+        InvokeRepeating("StageReady", 3f, 1f);
+    }
+    private void Success() 
 	{
 		msgPanel.SetActive(true);  // 啟動 msgPanel
 		successPanel.SetActive(true);   // 啟動 successPanel
-		stageProcess.stageIsOpen[1] = true;
+        stageProcess.stageClearTime[0] += 1;
+
+        // 2020.12.17 因應校內展, 暫不開啟下一關
+		// stageProcess.stageIsOpen[1] = true;  // 開啟下一關
 	}
 	// 失敗 NotFound() -> Failed()
 	public void NotFound()

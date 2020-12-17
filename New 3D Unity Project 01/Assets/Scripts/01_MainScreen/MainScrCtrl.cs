@@ -12,6 +12,7 @@ public class MainScrCtrl : MonoBehaviour {
 	public StageProcess stageProcess;
 	public Button[] btn2Stage;
 	public Button[] btn2World;
+    public GameObject[] btn2Intro;
 
 	void Awake()
 	{
@@ -41,6 +42,15 @@ public class MainScrCtrl : MonoBehaviour {
 				btn2Stage[i].interactable = true;
 			}
 		}
+
+        for (int i = 0; i < btn2Intro.Length; i++)
+        {
+            if (stageProcess.introIsDone[i] == true)
+            {
+                btn2Intro[i].SetActive(false);
+            }
+        }
+
 		for (int i = 0; i < btn2World.Length; i++)
 		{
 			if (stageProcess.worldIsOpen[i] == true)

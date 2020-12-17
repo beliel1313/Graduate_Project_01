@@ -53,3 +53,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageIsOpen: 010000
   worldIsOpen: 01000000000000
+  introIsDone: 010000
+  stageClearTime: 000000000000000000000000

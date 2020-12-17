@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class _03_1_INTRO2STAGE : MonoBehaviour {
     public SceneLoader loader;
+    public StageProcess process;
     public PCCtrl pc;
 
 	// Use this for initialization
@@ -20,6 +21,7 @@ public class _03_1_INTRO2STAGE : MonoBehaviour {
     {
         if (collision.tag == "Player")
         {
+            process.introIsDone[0] = true;
             pc.enabled = false;
             pc.gameObject.GetComponent<Animator>().SetBool("isWalking", false);
             loader.Play("03-1B_ForestStage1");

@@ -5,6 +5,9 @@ using UnityEngine;
 public class StageProcess : MonoBehaviour {
 	public bool[] stageIsOpen;
 	public bool[] worldIsOpen;
+    public bool[] introIsDone;
+
+    public int[] stageClearTime;
 
 	// Use this for initialization
 	void Start () {

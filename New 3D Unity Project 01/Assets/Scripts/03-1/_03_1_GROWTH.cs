@@ -23,14 +23,18 @@ public class _03_1_GROWTH : MonoBehaviour,IPointerClickHandler {
     public void OnPointerClick(PointerEventData eventData)
     {
         growthAnim.Play();  // 點擊時播放動畫
-        stagePlay.clickTime += 1;   //點擊時控制器的 clickTime += 1
+        stagePlay.clickTime += 1;   // 點擊時控制器的 clickTime += 1
+        Destroy(stagePlay.lifePoint[stagePlay.clickTime].gameObject);
 
         if (stagePlay.answer == num)    // 點擊時, 草叢編號與正解一致時進行下列程式
         {
             stagePlay.isFind = true;
             stagePlay.FindAnimal(); // 執行控制器的 FindAnimal()
         }
-
+        if (stagePlay.answer != num)
+        {
+            stagePlay.FindOops();
+        }
         if (stagePlay.clickTime >= 3 && stagePlay.isFind == false) 
         {
             stagePlay.NotFound();

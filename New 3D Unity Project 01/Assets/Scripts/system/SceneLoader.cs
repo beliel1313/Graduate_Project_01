@@ -10,12 +10,14 @@ public class SceneLoader : MonoBehaviour {
     // public Slider loadingBar;
     public GameObject loadPanel;
     public string sceneName;
+    public StageProcess process;
 
     public void Play(string s)
     {
-        Debug.Log("Play");
+        // Debug.Log("Play");
         loadPanel.SetActive(true);
         sceneName = s;
+
         StartCoroutine(Loading());
     }
 
