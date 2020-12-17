@@ -1520,7 +1520,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &476090954
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1571,8 +1571,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u9806\u5229\u627E\u5230\u5C0F\u5C71\u7F8C\u4E86\uFF01\n\u6BCD\u5C71\u7F8C\u5F88\u611F\u8B1D\u4F60,
-    \u9001\u4E86\u4F60\u79AE\u7269\n\n\n\u5E0C\u671B\u5C0F\u5C71\u7F8C\u4E0D\u8981\u518D\u5230\u8655\u4E82\u8DD1\u4E86..."
+  m_Text: "\u4F60\u627E\u5230\u5C0F\u5C71\u7F8C\u4E86\uFF01\n\u5C0F\u5C71\u7F8C\u73A9\u5F97\u5F88\u958B\u5FC3,
+    \u9001\u4E86\u4F60\u79AE\u7269\n\n\n\u5C0F\u5C71\u7F8C\u5FC3\u6EFF\u610F\u8DB3\u5730\u56DE\u5BB6\u4E86
+    !"
 --- !u!222 &476090956
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1672,7 +1673,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &487318019
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2367,7 +2368,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &633230255
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2516,8 +2517,14 @@ MonoBehaviour:
   countText: {fileID: 1620824839}
   failPanel: {fileID: 729206245}
   successPanel: {fileID: 487318018}
-  msg1st: []
-  msg2nd: []
+  msg1st:
+  - {fileID: 568378550}
+  - {fileID: 911195426}
+  - {fileID: 831755100}
+  msg2nd:
+  - {fileID: 481900525}
+  - {fileID: 505044970}
+  - {fileID: 476090953}
 --- !u!4 &667555700
 Transform:
   m_ObjectHideFlags: 0

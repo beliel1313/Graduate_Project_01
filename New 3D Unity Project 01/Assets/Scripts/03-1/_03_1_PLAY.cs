@@ -30,7 +30,11 @@ public class _03_1_PLAY : MonoBehaviour {
 		}
         if (stageProcess.stageClearTime[0] >= 1)
         {
-
+            for (int i = 0; i < 3; i++)
+            {
+                msg1st[i].SetActive(false);
+                msg2nd[i].SetActive(true);
+            }
         }
 	}
 
