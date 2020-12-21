@@ -23,6 +23,7 @@ public class WasteCane : MonoBehaviour {
             if (collision.gameObject.GetComponent<WasteObject>().type == TypeNum)
             {
                 Destroy(collision.gameObject);
+                manager2.wasteKilled += 1;
             }
             else if(collision.gameObject.GetComponent<WasteObject>().type != TypeNum)
             {

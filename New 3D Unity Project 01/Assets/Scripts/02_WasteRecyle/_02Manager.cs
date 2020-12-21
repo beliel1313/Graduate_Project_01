@@ -4,22 +4,31 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class _02Manager : MonoBehaviour {
+    [Header("Play")]
     public GameManager gameManager;
+    public WasteCane cane;
     public GameObject[] waste;
     public Transform[] GenPoint;
-
-    public Text topMsg;
+    public int wasteKilled;
+    private float useTime;
+    [Header("UI")]
+    public Text topMsg, timeCount;
+    public GameObject sysPnl, successPnl;
 
 	// Use this for initialization
 	void Start () {
         gameManager.GamePause();
         GenWastes();
-
-	}
+        InvokeRepeating("Timer", 0f, 0.1f);
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if (wasteKilled == GenPoint.Length) 
+        {
+            Invoke("Success", 0.8f);
+        }
+
 	}
 
     public void GenWastes()
@@ -40,5 +49,17 @@ public class _02Manager : MonoBehaviour {
     private void EraseMsg() 
     {
         topMsg.text = "";
+    }
+
+    private void Timer() 
+    {
+        useTime += 0.1f;
+    }
+    public void Success() 
+    {
+        CancelInvoke("Timer");
+        sysPnl.SetActive(true);
+        successPnl.SetActive(true);
+        timeCount.text = "花費時間 " + useTime.ToString("00.0") + " 秒";
     }
 }
