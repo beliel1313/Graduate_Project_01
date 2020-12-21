@@ -26,8 +26,9 @@ GameObject:
   - component: {fileID: 61026852078849314}
   - component: {fileID: 50051958108975724}
   - component: {fileID: 114397090616436752}
+  - component: {fileID: 70149783250398782}
   m_Layer: 5
-  m_Name: Waste03
+  m_Name: Waste16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,7 +48,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 24
+  m_GravityScale: 32
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -59,7 +60,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1186222737861708}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -76,8 +77,23 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 80, y: 80}
+  m_Size: {x: 90, y: 90}
   m_EdgeRadius: 0
+--- !u!70 &70149783250398782
+CapsuleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1186222737861708}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 100, y: 1}
+  m_Direction: 0
 --- !u!114 &114259275189173296
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -117,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 190d98e98b61b814a89d31127d2be63a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
+  type: 1
 --- !u!114 &114824154726342872
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -137,7 +153,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 6ddda9edd5f418644ba5cb665cea3652, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 921130a1d606a554c90b6b40958724cb, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

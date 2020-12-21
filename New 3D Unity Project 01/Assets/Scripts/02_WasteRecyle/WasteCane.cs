@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WasteCane : MonoBehaviour {
     public int TypeNum;
+    public _02Manager manager2;
 
 	// Use this for initialization
 	void Start () {
@@ -25,7 +26,8 @@ public class WasteCane : MonoBehaviour {
             }
             else if(collision.gameObject.GetComponent<WasteObject>().type != TypeNum)
             {
-                print("WRONG!!");
+                // print("WRONG!!");
+                manager2.WrongMsg();
             }
         }
     }
