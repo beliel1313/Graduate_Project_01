@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114150053777642254}
   - component: {fileID: 61322028255871484}
   - component: {fileID: 50775424776955858}
+  - component: {fileID: 114028825497195640}
   m_Layer: 5
   m_Name: Waste31
   m_TagString: Untagged
@@ -77,6 +78,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 100, y: 100}
   m_EdgeRadius: 0
+--- !u!114 &114028825497195640
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1875672386557708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 190d98e98b61b814a89d31127d2be63a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 3
 --- !u!114 &114122033955490926
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114497296731135282}
   - component: {fileID: 61179875488240482}
   - component: {fileID: 50398762352880640}
+  - component: {fileID: 114750003861483832}
   m_Layer: 5
   m_Name: Waste40
   m_TagString: Untagged
@@ -132,6 +133,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114750003861483832
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1568131062547812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 190d98e98b61b814a89d31127d2be63a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 4
 --- !u!222 &222463156528836080
 CanvasRenderer:
   m_ObjectHideFlags: 1

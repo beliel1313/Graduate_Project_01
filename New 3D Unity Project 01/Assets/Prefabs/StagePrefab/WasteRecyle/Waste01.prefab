@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114820186587994470}
   - component: {fileID: 61988648827708070}
   - component: {fileID: 50566388195454272}
+  - component: {fileID: 114982505665383648}
   m_Layer: 5
   m_Name: Waste01
   m_TagString: Untagged
@@ -132,6 +133,18 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 4, y: -4}
   m_UseGraphicAlpha: 1
+--- !u!114 &114982505665383648
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1084064045431252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 190d98e98b61b814a89d31127d2be63a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
 --- !u!222 &222367135750230122
 CanvasRenderer:
   m_ObjectHideFlags: 1
