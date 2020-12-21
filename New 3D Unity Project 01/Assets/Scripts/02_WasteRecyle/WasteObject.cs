@@ -39,4 +39,9 @@ public class WasteObject : MonoBehaviour,IPointerDownHandler,IPointerExitHandler
         isHold = false;
 
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        
+    }
 }
