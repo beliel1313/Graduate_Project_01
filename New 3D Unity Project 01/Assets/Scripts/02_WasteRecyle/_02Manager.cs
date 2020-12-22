@@ -26,6 +26,7 @@ public class _02Manager : MonoBehaviour {
 	void Update () {
         if (wasteKilled == GenPoint.Length) 
         {
+            CancelInvoke("Timer");
             Invoke("Success", 0.8f);
         }
 
@@ -57,7 +58,6 @@ public class _02Manager : MonoBehaviour {
     }
     public void Success() 
     {
-        CancelInvoke("Timer");
         sysPnl.SetActive(true);
         successPnl.SetActive(true);
         timeCount.text = "花費時間 " + useTime.ToString("00.0") + " 秒";

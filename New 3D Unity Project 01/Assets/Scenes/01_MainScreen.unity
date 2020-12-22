@@ -6653,6 +6653,8 @@ GameObject:
   - component: {fileID: 872040445}
   - component: {fileID: 872040444}
   - component: {fileID: 872040448}
+  - component: {fileID: 872040450}
+  - component: {fileID: 872040449}
   m_Layer: 5
   m_Name: MapGroup
   m_TagString: Untagged
@@ -6779,6 +6781,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   note:
   - "\u7A7A\u6309\u9215\u963B\u64CB\u4E0A\u5C64\u9762\u677F\u9EDE\u64CA\u95DC\u9589\u529F\u80FD"
+--- !u!114 &872040449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 872040442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
+--- !u!114 &872040450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 872040442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 4, y: -4}
+  m_UseGraphicAlpha: 1
 --- !u!1 &872296007
 GameObject:
   m_ObjectHideFlags: 0
@@ -13761,7 +13791,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 1830575590}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
