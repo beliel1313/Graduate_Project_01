@@ -48,6 +48,7 @@ public class MainScrCtrl : MonoBehaviour {
             if (stageProcess.introIsDone[i] == true)
             {
                 btn2Intro[i].SetActive(false);
+                stageProcess.stageIsOpen[i] = true;
             }
         }
 
