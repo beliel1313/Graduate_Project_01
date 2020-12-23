@@ -34,6 +34,9 @@ public class _03_1_GROWTH : MonoBehaviour,IPointerClickHandler {
         if (stagePlay.answer != num)
         {
             stagePlay.FindOops();
+            int r = Random.Range(0, stagePlay.wrongAnimal.Length);
+            GameObject wrongA = Instantiate(stagePlay.wrongAnimal[r], transform, false);
+            Destroy(wrongA, 2f);
         }
         if (stagePlay.clickTime >= 3 && stagePlay.isFind == false) 
         {
