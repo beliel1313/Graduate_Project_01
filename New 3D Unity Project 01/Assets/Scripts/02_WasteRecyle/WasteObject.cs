@@ -29,7 +29,7 @@ public class WasteObject : MonoBehaviour,IPointerDownHandler,IPointerExitHandler
     public void OnPointerExit(PointerEventData eventData)
     {
         // throw new System.NotImplementedException();
-        isHold = false;
+        // isHold = false;
 
     }
 
