@@ -21,11 +21,11 @@ GameObject:
   - component: {fileID: 224475742006129442}
   - component: {fileID: 222443054347876750}
   - component: {fileID: 114189894019899202}
+  - component: {fileID: 114449925525640230}
   - component: {fileID: 114758889127357988}
   - component: {fileID: 114178962696995018}
   - component: {fileID: 61801309570561010}
   - component: {fileID: 50732939519509110}
-  - component: {fileID: 114449925525640230}
   - component: {fileID: 70795798673155544}
   m_Layer: 5
   m_Name: Waste33
@@ -147,6 +147,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 3
+  evTrigger: 9
+  manager: {fileID: 0}
+  wasteMsg: 
 --- !u!114 &114758889127357988
 MonoBehaviour:
   m_ObjectHideFlags: 1

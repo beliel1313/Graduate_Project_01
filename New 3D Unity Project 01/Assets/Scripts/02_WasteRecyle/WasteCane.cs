@@ -28,7 +28,7 @@ public class WasteCane : MonoBehaviour {
             else if(collision.gameObject.GetComponent<WasteObject>().type != TypeNum)
             {
                 // print("WRONG!!");
-                manager2.WrongMsg();
+                // manager2.WrongMsg();
             }
         }
     }

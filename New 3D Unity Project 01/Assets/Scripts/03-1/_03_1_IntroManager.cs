@@ -10,10 +10,10 @@ public class _03_1_IntroManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		InvokeRepeating("StageIntro", 1f, 0.05f);
-		Destroy(startPnl.gameObject, 2f);
+		InvokeRepeating("StageIntro", 2f, 0.05f);
+		Destroy(startPnl.gameObject, 3f);
 		pc.enabled = false;
-		Invoke("ActivePC", 2f);
+		Invoke("ActivePC", 3f);
 
 	}
 	

@@ -85,15 +85,23 @@ public class _03_1_PLAY : MonoBehaviour {
 		switch (c) 
 		{
 			case 1:
+				topMsg.gameObject.SetActive(true);
 				topMsg.text = "小山羌正在草叢間亂跑...";
 				break;
 			case 2:
+				topMsg.gameObject.SetActive(true);
 				topMsg.text = "開始找吧!";
+				Invoke("TopMsgInvis", 0.7f);
 				break;
 			case 3:
+				topMsg.gameObject.SetActive(true);
 				topMsg.text = "找錯了...";
 				break;
 		}
+	}
+	private void TopMsgInvis() 
+	{
+		topMsg.gameObject.SetActive(false);
 	}
 
 	// 正解 FindAnimal() -> Success()
