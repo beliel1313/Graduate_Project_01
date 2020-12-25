@@ -21,7 +21,7 @@ public class _02Manager : MonoBehaviour {
         GenWastes();
         for (int i = 0; i < waste.Length; i++) 
         {
-            waste[i].GetComponent<WasteObject>().manager = gameObject.GetComponent<_02Manager>();
+            // waste[i].GetComponent<WasteObject>().manager = gameObject.GetComponent<_02Manager>();
         }
         InvokeRepeating("Timer", 0f, 0.1f);
     }
@@ -38,10 +38,12 @@ public class _02Manager : MonoBehaviour {
 
     public void GenWastes()
     {
+        GameObject wasteClone;
         for (int i = 0; i < GenPoint.Length; i++)
         {
             int r = Random.Range(0, waste.Length);
-            Instantiate(waste[r], GenPoint[i]);
+            wasteClone = Instantiate(waste[r], GenPoint[i]);
+            wasteClone.GetComponent<WasteObject>().manager = gameObject.GetComponent<_02Manager>();
         }
 
     }
