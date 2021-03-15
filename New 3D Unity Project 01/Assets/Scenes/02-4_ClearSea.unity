@@ -154,6 +154,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 91508265}
+  - component: {fileID: 91508267}
+  - component: {fileID: 91508266}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -174,6 +176,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &91508266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 91508264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10102865aa12a1142988c5de16737790, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  genPoint:
+  - {fileID: 1815401819}
+  - {fileID: 2124121114}
+  - {fileID: 1717562626}
+  - {fileID: 830129949}
+  waste:
+  - {fileID: 1997652827596442, guid: a2fe92bb848805f44bb916512942f58d, type: 2}
+  - {fileID: 1252919336036600, guid: 59d9da0971601f04cb195b8b7fe78f9b, type: 2}
+  - {fileID: 1188578279104198, guid: 6cc238f2b5187c8489d77534f33af6d0, type: 2}
+  - {fileID: 1225642415241258, guid: cf4bdc12707c14a4c991050fa14268d1, type: 2}
+  - {fileID: 1600938182885582, guid: e355be4c89d23d44c95ceec6a54f8c46, type: 2}
+  - {fileID: 1217714069041792, guid: e95020a7d520da347bc9b38fc5afa0c2, type: 2}
+  - {fileID: 1492074439569402, guid: 156813224ebb4604094e5d503331b938, type: 2}
+  - {fileID: 1210951513457380, guid: 6b04a8e384623c440bba2c58ae692eae, type: 2}
+  - {fileID: 1372144302152470, guid: b90c7c6ddb90c7146b0be13e88e938ad, type: 2}
+  - {fileID: 1324164963765264, guid: 9a3d34e348a66b24ba6e25f941acc939, type: 2}
+  - {fileID: 1789420817814392, guid: 08ace9a7b9ccc7640985edbd2ec7c83b, type: 2}
+  - {fileID: 1110488057428912, guid: 7d1a57ee89b590b4d916d147b5f619e6, type: 2}
+  - {fileID: 1509378154487546, guid: f17f9445b22918749b2bb29a52c804bb, type: 2}
+  - {fileID: 1141492134000290, guid: 4dbe007d4d39015478c78f7915a933c3, type: 2}
+  - {fileID: 1516294238947366, guid: 4975dc9dc2e54ba4292cec3528d4fc46, type: 2}
+  - {fileID: 1599592940043980, guid: 62975db2e65438944aefa8b74c9434e3, type: 2}
+  - {fileID: 1422249803101254, guid: 0852b96457351c54db374fd975c726fb, type: 2}
+  genRate: 0
+  genTimeCount: 0
+  xSpeed: 0
+--- !u!114 &91508267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 91508264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee1c79a54a3a3c2479aa771c6cbe6cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &118803118
 GameObject:
   m_ObjectHideFlags: 0
