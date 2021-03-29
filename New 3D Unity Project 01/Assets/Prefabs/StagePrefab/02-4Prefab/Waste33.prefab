@@ -21,11 +21,11 @@ GameObject:
   - component: {fileID: 224002804106769462}
   - component: {fileID: 222796838426163732}
   - component: {fileID: 114509075534290852}
+  - component: {fileID: 114764493570813246}
   - component: {fileID: 114265571540913986}
   - component: {fileID: 114258598365764906}
   - component: {fileID: 50479611092788770}
   - component: {fileID: 70930781659075288}
-  - component: {fileID: 114764493570813246}
   m_Layer: 5
   m_Name: Waste33
   m_TagString: Untagged
